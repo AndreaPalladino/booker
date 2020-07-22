@@ -1,0 +1,74 @@
+:root{
+    --dieci:yellow;
+}
+
+
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mastheadAcceso {
+    height: 100vh;
+    min-height: 500px;
+    background:linear-gradient(270deg,rgba(0,0,0,1) 65%,transparent),url('/media/readdark.jpeg');
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+#btn{
+    border-radius: 10px;
+    background: linear-gradient(120deg,gold,white,gold);
+}
+
+sup{
+    font-size: 40px;
+}
+
+.class {
+    display: inline-block;
+    
+    font-size: 130px;
+    color:black;
+    letter-spacing: 0.2em;
+    transition: all 0.3s ease-in-out;        
+    cursor: pointer;
+}
+.class2 {
+    text-shadow:
+                    0 1px 0 rgb(190,190,190),
+                    0 2px 0 rgb(185,185,185),
+                    0 3px 0 rgb(180,180,180),
+                    0 4px 0 rgb(175,175,175),
+                    0 5px 0 rgb(170,170,170),
+                    0 6px 0 rgb(165,165,165),
+                    0 7px 0 rgb(160,160,160),
+                    0 8px 0 rgb(155,155,155),
+                    0 9px 0 rgb(150,150,150),
+
+                    0 1px 5px rgba(0,0,0,.05),
+                    0 5px 5px rgba(0,0,0,.10),
+                    0 10px 10px rgba(0,0,0,.15),
+                    0 15px 10px rgba(0,0,0,.20),
+                    0 20px 15px rgba(0,0,0,.25);
+    color:yellow;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 2px 11px 6px rgb(240, 235, 174);
+}
+
+
+
+#subtitle{
+    color:black;
+}
+
+.class3{
+    color:yellow !important;
+    transition: all 0.3s ease-in-out;
+}
+
