@@ -2,6 +2,7 @@ let button = document.querySelector('#btn');
 let letter = document.querySelector('.class');
 let subtitle = document.querySelector('#subtitle');
 let sfondo = document.querySelector('#sfondo');
+let bar = document.querySelector('#bar');
 
 function changeText() {
 
@@ -22,5 +23,8 @@ button.addEventListener('click', ()=>{
     letter.classList.toggle('class2');
     subtitle.classList.toggle('class3');
     sfondo.classList.toggle('mastheadAcceso');
+    bar.classList.toggle('neon');
+   /*  bar.classList.toggle('neon:hover'); */
+
     changeText();
 })

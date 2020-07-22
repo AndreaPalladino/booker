@@ -37336,6 +37336,7 @@ var button = document.querySelector('#btn');
 var letter = document.querySelector('.class');
 var subtitle = document.querySelector('#subtitle');
 var sfondo = document.querySelector('#sfondo');
+var bar = document.querySelector('#bar');
 
 function changeText() {
   if (button.value == "Turn-on the Lights") {
@@ -37351,6 +37352,9 @@ button.addEventListener('click', function () {
   letter.classList.toggle('class2');
   subtitle.classList.toggle('class3');
   sfondo.classList.toggle('mastheadAcceso');
+  bar.classList.toggle('neon');
+  /*  bar.classList.toggle('neon:hover'); */
+
   changeText();
 });
 

@@ -10968,11 +10968,43 @@ sup {
   cursor: pointer;
 }
 
+/* .class2 {
+    text-shadow:
+                    0 1px 0 rgb(190,190,190),
+                    0 2px 0 rgb(185,185,185),
+                    0 3px 0 rgb(180,180,180),
+                    0 4px 0 rgb(175,175,175),
+                    0 5px 0 rgb(170,170,170),
+                    0 6px 0 rgb(165,165,165),
+                    0 7px 0 rgb(160,160,160),
+                    0 8px 0 rgb(155,155,155),
+                    0 9px 0 rgb(150,150,150),
+
+                    0 1px 5px rgba(0,0,0,.05),
+                    0 5px 5px rgba(0,0,0,.10),
+                    0 10px 10px rgba(0,0,0,.15),
+                    0 15px 10px rgba(0,0,0,.20),
+                    0 20px 15px rgba(0,0,0,.25);
+    color:yellow;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 2px 11px 6px rgb(240, 235, 174);
+} */
+
 .class2 {
-  text-shadow: 0 1px 0 #bebebe, 0 2px 0 #b9b9b9, 0 3px 0 #b4b4b4, 0 4px 0 #afafaf, 0 5px 0 #aaaaaa, 0 6px 0 #a5a5a5, 0 7px 0 #a0a0a0, 0 8px 0 #9b9b9b, 0 9px 0 #969696, 0 1px 5px rgba(0, 0, 0, 0.05), 0 5px 5px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.15), 0 15px 10px rgba(0, 0, 0, 0.2), 0 20px 15px rgba(0, 0, 0, 0.25);
   color: yellow;
-  transition: all 0.3s ease-in-out;
-  text-shadow: 2px 11px 6px #f0ebae;
+  text-shadow: 0 0 10px #e5f321, 0 0 40px #e5f321, 0 0 80px #e5f321;
+}
+
+.neon {
+  left: -100%;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e5f321);
+}
+
+.neon:hover {
+  left: 100%;
+  transition: 1s;
 }
 
 #subtitle {
