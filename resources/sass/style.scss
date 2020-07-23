@@ -88,3 +88,21 @@ sup{
     transition: all 0.3s ease-in-out;
 }
 
+.card{
+    background-color: rgba(0,0,0,0.5) !important;
+    height:380px;
+}
+
+.card-header{
+    text-align: center !important;
+    color: #e5f321 !important;
+    font-size: 42px;
+}
+
+.borderbox{
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom:2px solid rgba(231, 228, 23, 0.904);
+}
