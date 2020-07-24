@@ -29,9 +29,9 @@
             
             <div class="col-6 col-md-4">
                 
-                <a href="#" class="d-block mb-4 h-100">
+            <a href="{{route('book.show', ['book'=>$book])}}" class="d-block mb-4 h-100">
                     <div class="overlay overlay:hover">
-                        <p class="text-center text-warning align-items-center">Go -></p>
+                        <h6 class="text-center textMiddle">Go-></h6>
                       </div>
                       <img class="img-fluid h-img img-thumbnail" src="{{Storage::url($book->img)}}" alt="BookCover">
                       

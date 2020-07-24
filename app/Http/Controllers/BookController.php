@@ -44,7 +44,7 @@ class BookController extends Controller
         $book->title=$request->input('title');
         $book->author=$request->input('author');
         $book->img=$request->file('img')->store('public/img');
-        $book->pdf=$request->file('pdf')->move('public/pdf');
+        $book->pdf=$request->file('pdf')->store('public/pdf');
         $book->plot=$request->input('plot');
         $book->user_id=Auth::id();
         $book->save();
@@ -60,7 +60,7 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        //
+        return view('book.show', ['book'=>$book]);
     }
 
     /**
