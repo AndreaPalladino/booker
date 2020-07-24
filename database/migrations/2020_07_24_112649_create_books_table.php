@@ -18,6 +18,7 @@ class CreateBooksTable extends Migration
             $table->string('title');
             $table->string('author');
             $table->string('img');
+            $table->string('pdf');
             $table->text('plot');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Book;
 use Illuminate\Http\Request;
+use App\Http\Requests\BookRequest;
+use Illuminate\Support\Facades\Auth;
 
 class BookController extends Controller
 {
@@ -14,7 +16,9 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        $books = Book::orderBy('id','desc')->get();
+
+        return view('book.index', compact('books'));
     }
 
     /**
@@ -24,7 +28,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return view('book.create');
     }
 
     /**
@@ -33,9 +37,19 @@ class BookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BookRequest $request)
     {
-        //
+        $book = new Book();
+        
+        $book->title=$request->input('title');
+        $book->author=$request->input('author');
+        $book->img=$request->file('img')->store('public/img');
+        $book->pdf=$request->file('pdf')->move('public/pdf');
+        $book->plot=$request->input('plot');
+        $book->user_id=Auth::id();
+        $book->save();
+
+       return redirect()->back()->with('message','Book Uploaded Correctly!');
     }
 
     /**

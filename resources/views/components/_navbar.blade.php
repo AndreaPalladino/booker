@@ -15,7 +15,7 @@
             <a class="nav-link navlink navlink:hover" href="#">Who</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link navlink navlink:hover" href="#">Books</a>
+          <a class="nav-link navlink navlink:hover" href="{{route('book.index')}}">Books</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link navlink navlink:hover" href="#">Contact</a>
@@ -47,7 +47,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-                        <a class="dropdown-item" href="">Add a Book</a>
+                      <a class="dropdown-item" href="{{route('book.create')}}">Add a Book</a>
                         
                     </div>
                     

@@ -2,6 +2,9 @@
     --dieci:yellow;
 }
 
+.text10{
+    color: #e5f321;
+}
 
 .masthead {
     height: 100vh;
@@ -92,6 +95,10 @@ sup{
     background-color: rgba(0,0,0,0.5) !important;
     height:380px;
 }
+.card{
+    background-color: rgba(0,0,0,0.5) !important;
+    
+}
 
 .card-header{
     text-align: center !important;
@@ -114,4 +121,35 @@ sup{
 .navlink:hover{
     color:black;
     text-shadow:0 0 10px #e5f321, 0 0 40px #e5f321, 0 0 80px #e5f321;
+}
+
+.borderAdd{
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom:2px dotted rgba(29, 29, 27, 0.904);
+}
+
+.h-img{
+    
+    height:350px;
+    width:250px;
+}
+
+.overlay{
+    position: absolute;
+    height: 350px;
+    width:250px;
+    opacity:0;
+    z-index: 999;
+}
+.overlay:hover{
+    position: absolute;
+    height: 350px;
+    width:250px;
+    background-color: rgba(255,255,255,0.5);
+    z-index: 999;
+    opacity:1;
+    transition: 0.5s;
 }
