@@ -11035,3 +11035,13 @@ sup {
   border-bottom: 2px solid rgba(231, 228, 23, 0.904);
 }
 
+.navlink {
+  color: white;
+  text-shadow: 0;
+}
+
+.navlink:hover {
+  color: black;
+  text-shadow: 0 0 10px #e5f321, 0 0 40px #e5f321, 0 0 80px #e5f321;
+}
+
