@@ -34,6 +34,10 @@ body{
               <h4 class="text-center mt-4 float-none">{{$book->plot}}</h4>
               <h4 class="text-center mt-4 float-none">{{$book->plot}}</h4>
               <h5 class="mt-5 mb-3">Caricato da: {{$book->user->name}}</h5>
+              <h5>Categories:</h5>
+              @foreach($book->categories as $category)
+              <p class="">{{$category->name}}</p>
+              @endforeach
               @auth
               <a href="{{Storage::url($book->pdf)}}" target="blank" class="btn btn-warning mt-5 w-25">Read</a>
               

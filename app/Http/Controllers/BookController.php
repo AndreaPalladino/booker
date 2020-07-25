@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Book;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\BookRequest;
 use Illuminate\Support\Facades\Auth;
@@ -28,7 +29,9 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('book.create');
+        $categories = Category::all();
+
+        return view('book.create', compact('categories'));
     }
 
     /**
@@ -39,7 +42,10 @@ class BookController extends Controller
      */
     public function store(BookRequest $request)
     {
+       
+
         $book = new Book();
+
         
         $book->title=$request->input('title');
         $book->author=$request->input('author');
@@ -47,7 +53,15 @@ class BookController extends Controller
         $book->pdf=$request->file('pdf')->store('public/pdf');
         $book->plot=$request->input('plot');
         $book->user_id=Auth::id();
+        
         $book->save();
+
+        foreach($request->input() as $key=>$input){
+            if(is_numeric($key)){
+                $book->categories()->attach($input);
+            }
+        }
+        
 
        return redirect()->back()->with('message','Book Uploaded Correctly!');
     }

@@ -33,7 +33,7 @@
         <div class="col-12 col-md-5 ml-5 pl-5">
         <form method="POST" action="{{route('book.store')}}" enctype="multipart/form-data">
             @csrf
-                <div class="form-group my-4">
+                <div class="form-group ">
                   <label ></label>
                 <input name="title" type="text" class="bg-transparent borderAdd w-100" placeholder="Title" value="{{old('title')}}">
                 </div>
@@ -41,10 +41,18 @@
                     <label ></label>
                     <input name="author" type="text" class="bg-transparent borderAdd w-100" placeholder="Author" value="{{old('author')}}">
                 </div>
-                <div class="form-group my-4">
+                <div class="form-group mt-1">
                     <textarea  name="plot" class="rounded-box my-5" rows="5" cols="50" placeholder="Plot" value="{{old('plot')}}"></textarea>
                 </div>
-                <div class="form-group my-4">
+                @foreach($categories as $category)
+                <div class="form-check d-inline mx-1">
+                <input name="{{$category->id}}" class="form-check-input" type="checkbox" value="{{$category->id}}" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                      {{$category->name}}
+                    </label>
+                  </div>
+                @endforeach
+                <div class="form-group my-3">
                     <label class="mr-2" >Cover</label>
                     <input name="img" type="file" class="btn-dark" value="{{old('img')}}">
                 </div>

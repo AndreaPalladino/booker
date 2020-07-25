@@ -14,6 +14,7 @@
 
 
 
+
 <div class="container-my-5 py-5">
     <div class="row mt-5">
         <div class="col-12 mt-5">
@@ -27,7 +28,7 @@
      
           @foreach($books as $book)
             
-            <div class="col-6 col-md-4">
+            <div class="col-6 col-md-4" id="myUL">
                 
             <a href="{{route('book.show', ['book'=>$book])}}" class="d-block mb-4 h-100">
                     <div class="overlay overlay:hover">
@@ -51,3 +52,6 @@
 
     
 @endsection
+@push('script')
+  
+@endpush
