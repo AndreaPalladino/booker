@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/Contacts', 'HomeController@contact')->name('contact');
+Route::post('/Contacts/submit', 'HomeController@submit')->name('submit');
+Route::get('/Thank-you', 'HomeController@thanks')->name('thank');
 
 Route::get('/Books/add-a-book', 'BookController@create')->name('book.create');
 Route::post('/Books/store', 'BookController@store')->name('book.store');
