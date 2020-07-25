@@ -11103,3 +11103,21 @@ sup {
   opacity: 0;
 }
 
+.shadow {
+  box-shadow: 0px 35px 54px 0px rgba(0, 0, 0, 0.75) !important;
+}
+
+.modale {
+  padding-right: 5px;
+  left: 30%;
+  height: 800px;
+  width: 400px;
+}
+
+.bgModal {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("/media/remove.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+

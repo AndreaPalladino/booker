@@ -71,7 +71,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        //
+        return view('book.edit', compact('book'));
     }
 
     /**
@@ -83,7 +83,15 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-        //
+        $book->title=$request->input('title');
+        $book->author=$request->input('author');
+        $book->img=$request->file('img')->store('public/img');
+        $book->pdf=$request->file('pdf')->store('public/pdf');
+        $book->plot=$request->input('plot');
+        $book->user_id=Auth::id();
+        $book->update();
+
+        return redirect(route('book.index', ['book'=>$book]));
     }
 
     /**
@@ -94,6 +102,8 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
-        //
+        $book->delete();
+
+        return redirect(route('book.index'));
     }
 }

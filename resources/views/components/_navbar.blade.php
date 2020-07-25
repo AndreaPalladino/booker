@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-transparent shadow fixed-top">
+<nav class="navbar navbar-expand-lg bg-transparent  fixed-top">
     <div class="container">
       <a class="navbar-brand text-warning" href="{{route('home')}}">theBooker</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +18,7 @@
           <a class="nav-link navlink navlink:hover" href="{{route('book.index')}}">Books</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link navlink navlink:hover" href="#">Contact</a>
+          <a class="nav-link navlink navlink:hover" href="{{route('contact')}}">Contact</a>
           </li>
           
             <!-- Authentication Links -->
