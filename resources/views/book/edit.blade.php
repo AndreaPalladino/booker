@@ -7,6 +7,14 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        @media screen and (max-width:600){
+            body{
+            background:linear-gradient(180deg,rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('/media/editbook.jpeg');
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        }
     </style>
 @endsection
 @section('content')
@@ -25,18 +33,18 @@
     </div>
 </div>
     
-<div class="container my-5 py 5">
+<div class="container my-5 py-5">
     <div class="row">
         <div class="col-12 col-md-5">
-            <h1 class="font-weight-bold text-center">Editing....</h1>
+            <h1 class="font-weight-bold text-center ml-md-5 pl-md-5">Editing....</h1>
         </div>
-        <div class="col-12 col-md-5 ml-3 pl-4 mt-5">
-        <form method="POST" action="{{route('book.update', compact('book'))}}" enctype="multipart/form-data">
+        <div class="col-12 col-md-5 ml-md-3 pl-md-4 mt-5">
+        <form class="mt-5 mt-md-0" method="POST" action="{{route('book.update', compact('book'))}}" enctype="multipart/form-data">
             @method('PUT')
             @csrf
                 <div class="form-group my-4">
                   <label ></label>
-                <input name="title" type="text" class="bg-transparent borderAdd w-100" placeholder="Title" value="{{$book->title}}">
+                <input name="title" type="text" class=" mt-5 mt-md-0 bg-transparent borderAdd w-100" placeholder="Title" value="{{$book->title}}">
                 </div>
                 <div class="form-group my-4">
                     <label ></label>

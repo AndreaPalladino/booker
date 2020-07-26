@@ -10932,7 +10932,8 @@ a.text-dark:focus {
   --dieci: yellow;
 }
 
-h1 {
+h1,
+.textFooter {
   font-family: "Dancing Script", cursive;
 }
 
@@ -11016,6 +11017,28 @@ sup {
   text-shadow: 0 0 10px #e5f321, 0 0 40px #e5f321, 0 0 80px #e5f321;
 }
 
+@media screen and (max-width: 600px) {
+  .class {
+    font-size: 50px !important;
+    color: black;
+    transition: none;
+  }
+
+  .class2 {
+    font-size: 50px !important;
+    color: yellow;
+  }
+
+  .mastheadAcceso {
+    height: 100vh;
+    min-height: 500px;
+    background: linear-gradient(270deg, black 65%, transparent), url("/media/readdark.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 .neon {
   left: -100%;
   width: 60%;
@@ -11039,11 +11062,19 @@ sup {
 
 .card {
   background-color: rgba(0, 0, 0, 0.5) !important;
-  height: 380px;
+  /* height:380px; */
 }
 
-.card {
-  background-color: rgba(0, 0, 0, 0.5) !important;
+/* .card{
+    background-color: rgba(0,0,0,0.5) !important;
+
+} */
+
+@media screen and (max-width: 600) {
+  .card {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    height: 800px !important;
+  }
 }
 
 .card-header {
@@ -11120,6 +11151,12 @@ sup {
   opacity: 0;
 }
 
+@media screen and (max-width: 600) {
+  .bgOff {
+    opacity: 1;
+  }
+}
+
 .shadow {
   box-shadow: 0px 35px 54px 0px rgba(0, 0, 0, 0.75) !important;
 }
@@ -11155,5 +11192,45 @@ sup {
 .profile {
   -webkit-clip-path: polygon(25% 0%, 100% 0, 100% 78%, 75% 100%, 0 100%, 1% 25%);
           clip-path: polygon(25% 0%, 100% 0, 100% 78%, 75% 100%, 0 100%, 1% 25%);
+  border-radius: 50%;
+}
+
+.btnEdit {
+  border-radius: 10px;
+  background: linear-gradient(120deg, gold, white, gold);
+}
+
+.btnRead {
+  border-radius: 10px;
+  background: linear-gradient(120deg, #172335, white, #172335);
+}
+
+.btnRemove {
+  border-radius: 10px;
+  background: linear-gradient(120deg, #5a2f06, white, #5a2f06);
+}
+
+.btnUpload {
+  border-radius: 10px;
+  background: linear-gradient(120deg, #035749, white, #035749);
+}
+
+.btnShow {
+  border-radius: 10px;
+  background: linear-gradient(120deg, #172335, white, #172335);
+}
+
+.hrfooter {
+  background-color: white;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid var(--dieci) !important;
+  border-radius: 0.25rem;
+  color: #e5f321 !important;
 }
 

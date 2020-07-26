@@ -6,6 +6,15 @@
           background-repeat: no-repeat;
           background-size: cover;
       }
+
+      @media screen and (max-width:600){
+        body{
+          background-image: url('/media/addbook.jpeg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position x: left  !important;
+      }
+      }
   </style>  
 @endsection
 @section('content')
@@ -27,10 +36,10 @@
     
 <div class="container my-5 py 5">
     <div class="row">
-        <div class="col-12 col-md-5 ml-5">
-            <h1 class="font-weight-bold ml-5 pl-5">Upload your Book here....</h1>
+        <div class="col-12 col-md-5 ml-md-5">
+            <h1 class="font-weight-bold ml-md-5 pl-md-5">Upload your Book here....</h1>
         </div>
-        <div class="col-12 col-md-5 ml-5 pl-5">
+        <div class="col-12 col-md-5 ml-md-5 pl-md-5">
         <form method="POST" action="{{route('book.store')}}" enctype="multipart/form-data">
             @csrf
                 <div class="form-group ">
@@ -45,8 +54,8 @@
                     <textarea  name="plot" class="rounded-box my-5" rows="5" cols="50" placeholder="Plot" value="{{old('plot')}}"></textarea>
                 </div>
                 @foreach($categories as $category)
-                <div class="form-check d-inline mx-1">
-                <input name="{{$category->id}}" class="form-check-input" type="checkbox" value="{{$category->id}}" id="defaultCheck1">
+                <div class="form-check d-md-inline mx-md-1">
+                <input name="{{$category->id}}" class="form-check-input text-white text-md-dark" type="checkbox" value="{{$category->id}}" id="defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">
                       {{$category->name}}
                     </label>

@@ -39,11 +39,11 @@ body{
               <p class="">{{$category->name}}</p>
               @endforeach
               @auth
-              <a href="{{Storage::url($book->pdf)}}" target="blank" class="btn btn-warning mt-5 w-25">Read</a>
+              <a href="{{Storage::url($book->pdf)}}" target="blank" class="btn btnRead mt-5 w-25">Read</a>
               
               @if($book->user == Auth::user())
-              <a href="{{route('book.edit', ['book'=>$book])}}" target="" class="btn btn-primary mt-5 ml-5 w-25">Edit</a>
-              <a href="" target="blank" class="btn btn-danger mt-5 ml-5 w-25" data-toggle="modal" data-target="#exampleModal">Remove</a>
+              <a href="{{route('book.edit', ['book'=>$book])}}" target="" class="btn btnEdit mt-5 ml-5 w-25">Edit</a>
+              <a href="" target="blank" class="btn btnRemove mt-5 ml-5 w-25" data-toggle="modal" data-target="#exampleModal">Remove</a>
               @endif
               @endauth
               </div>
@@ -69,7 +69,7 @@ body{
           @csrf
             <h2 class="text10 text-center mb-5 pb-5">WAIT</h2>
             <h5 class="text-center text-dark my-5 py-5">Are you relly sure you want to REMOVE IT?</h5>
-            <button type="submit" class="btn btn-danger mt-5 w-25 d-block mx-auto">Remove</button>
+            <button type="submit" class="btn btnRemove mt-5 w-25 d-block mx-auto">Remove</button>
         </form>
         <button type="button" class="btn btn-warning mt-3 w-25 d-block mx-auto" data-dismiss="modal">Close</button>
       </div>

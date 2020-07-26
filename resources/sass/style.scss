@@ -2,7 +2,7 @@
     --dieci:yellow;
 }
 
-h1{
+h1, .textFooter{
     font-family: 'Dancing Script', cursive;
 }
 
@@ -35,6 +35,7 @@ p, button{
     background-position: left center;
     background-repeat: no-repeat;
 }
+
 
 #btn{
     border-radius: 10px;
@@ -80,6 +81,36 @@ sup{
     color:yellow;
     text-shadow: 0 0 10px #e5f321, 0 0 40px #e5f321, 0 0 80px #e5f321;
 }
+
+@media screen and (max-width: 600px) {
+    .class {
+        
+    
+        font-size: 50px !important;
+        color:black;
+        
+        transition: none;        
+       
+    }
+    .class2{
+        font-size: 50px !important;
+        color:yellow;
+       
+    }
+
+    .mastheadAcceso {
+        height: 100vh;
+        min-height: 500px;
+        background:linear-gradient(270deg,rgba(0,0,0,1) 65%,transparent),url('/media/readdark.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+  }
+
+
+
 .neon{
     
     left:-100%;
@@ -105,12 +136,21 @@ sup{
 
 .card{
     background-color: rgba(0,0,0,0.5) !important;
-    height:380px;
+    /* height:380px; */
 }
-.card{
+/* .card{
     background-color: rgba(0,0,0,0.5) !important;
     
+} */
+
+@media screen and (max-width:600){
+    .card{
+        background-color: rgba(0,0,0,0.5) !important;
+        height: 800px !important;
+    }
 }
+
+
 
 .card-header{
     text-align: center !important;
@@ -186,6 +226,13 @@ sup{
     opacity: 0;
 }
 
+@media screen and (max-width:600){
+    .bgOff{
+        opacity:1;
+    }
+    
+}
+
 .shadow{
     -webkit-box-shadow: 0px 35px 54px 0px rgba(0,0,0,0.75) !important;
     -moz-box-shadow: 0px 35px 54px 0px rgba(0,0,0,0.75) !important;
@@ -222,5 +269,44 @@ sup{
 
 .profile{
     clip-path: polygon(25% 0%, 100% 0, 100% 78%, 75% 100%, 0 100%, 1% 25%);
+    border-radius: 50%;
+}
+
+.btnEdit{
+    border-radius: 10px;
+    background: linear-gradient(120deg,gold,white,gold);
+}
+
+.btnRead{
+    border-radius: 10px;
+    background: linear-gradient(120deg,rgb(23, 35, 53),white,rgb(23, 35, 53));
+}
+
+.btnRemove{
+    border-radius: 10px;
+    background: linear-gradient(120deg,rgb(90, 47, 6),white,rgb(90, 47, 6));
+}
+
+.btnUpload{
+    border-radius: 10px;
+    background: linear-gradient(120deg,rgb(3, 87, 73),white,rgb(3, 87, 73));
+}
+.btnShow{
+    border-radius: 10px;
+    background: linear-gradient(120deg,rgb(23, 35, 53),white,rgb(23, 35, 53));
+}
+
+.hrfooter{
+    background-color: white;
     
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.125rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid var(--dieci) !important;
+    border-radius: 0.25rem;
+    color: #e5f321 !important;
 }
