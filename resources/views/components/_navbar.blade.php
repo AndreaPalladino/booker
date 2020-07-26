@@ -38,12 +38,12 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="{{route('profile')}}">Your Profile</a>
-                      <a class="dropdown-item" href="{{route('book.create')}}">Add a Book</a>
+                      <a class="dropdown-item" href="{{route('profile')}}"><i class="fas fa-user-circle mr-3"></i>Your Profile</a>
+                      <a class="dropdown-item" href="{{route('book.create')}}"><i class="fas fa-book-medical mr-3"></i>Add a Book</a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            <i class="fas fa-sign-out-alt mr-3"></i>{{ __('Logout') }}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

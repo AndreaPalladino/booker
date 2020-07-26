@@ -11,7 +11,7 @@
 @section('content')
     
 <div class="container my-5 py-5">
-    <div class="row justify-content-center mt-5">
+    <div class="row justify-content-center my-5">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header"><h1>Contact us</h1></div>
@@ -51,7 +51,7 @@
                         </div>
                         
 
-                       <button type="submit" class="btn btn-warning d-block mx-auto mt-4">Submit</button>
+                       <button type="submit" class="btn btn-warning d-block mx-auto mt-4"><i class="fas fa-play"></i></button>
 
                                 
                             

@@ -58,7 +58,7 @@ class HomeController extends Controller
 
     public function profile(){
          
-          
+       
          $user=Auth::user();
          $books = $user->books()->get();
 

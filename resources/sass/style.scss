@@ -273,18 +273,18 @@ sup{
 }
 
 .btnEdit{
-    border-radius: 10px;
-    background: linear-gradient(120deg,gold,white,gold);
+    
+    color:gold;
 }
 
 .btnRead{
-    border-radius: 10px;
-    background: linear-gradient(120deg,rgb(23, 35, 53),white,rgb(23, 35, 53));
+    
+    color:rgba(23, 35, 53, 0.692);
 }
 
 .btnRemove{
-    border-radius: 10px;
-    background: linear-gradient(120deg,rgb(90, 47, 6),white,rgb(90, 47, 6));
+    
+    color: rgb(192, 134, 79);
 }
 
 .btnUpload{
@@ -292,8 +292,8 @@ sup{
     background: linear-gradient(120deg,rgb(3, 87, 73),white,rgb(3, 87, 73));
 }
 .btnShow{
-    border-radius: 10px;
-    background: linear-gradient(120deg,rgb(23, 35, 53),white,rgb(23, 35, 53));
+   
+    color: rgb(113, 131, 158);
 }
 
 .hrfooter{
@@ -309,4 +309,16 @@ sup{
     border: 1px solid var(--dieci) !important;
     border-radius: 0.25rem;
     color: #e5f321 !important;
+}
+
+.hrshow{
+    margin-bottom: 1em !important;
+    height: 1px !important;
+    background-color: black;
+}
+
+.btnModalRemove{
+    
+    border-radius: 10px;
+    background: linear-gradient(120deg,rgb(117, 74, 17),white,rgb(117, 74, 17));
 }

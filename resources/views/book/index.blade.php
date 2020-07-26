@@ -32,7 +32,7 @@
                 
             <a href="{{route('book.show', ['book'=>$book])}}" class="d-block mb-4 h-100">
                     <div class="overlay overlay:hover">
-                        <h6 class="text-center textMiddle">Go-></h6>
+                        <h6 class="text-center textMiddle"><i class="fas fa-sign-in-alt fa-2x"></i></h6>
                       </div>
                       <img class="img-fluid h-img img-thumbnail" src="{{Storage::url($book->img)}}" alt="BookCover">
                       

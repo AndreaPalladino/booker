@@ -30,20 +30,23 @@ body{
               <img src="{{Storage::url($book->img)}}" alt="cover" class="img-fluid h-img mx-auto d-block shadow mb-3">
               
               <h4 class="font-weight-bolder mt-5">Plot:</h4>
+              <hr>
               <h4 class="text-center mt-4 float-none">{{$book->plot}}</h4>
               <h4 class="text-center mt-4 float-none">{{$book->plot}}</h4>
               <h4 class="text-center mt-4 float-none">{{$book->plot}}</h4>
+              <hr>
               <h5 class="mt-5 mb-3">Caricato da: {{$book->user->name}}</h5>
               <h5>Categories:</h5>
               @foreach($book->categories as $category)
               <p class="">{{$category->name}}</p>
               @endforeach
+              <hr class="hrshow mb-1">
               @auth
-              <a href="{{Storage::url($book->pdf)}}" target="blank" class="btn btnRead mt-5 w-25">Read</a>
+              <a href="{{Storage::url($book->pdf)}}" target="blank" class="btn mt-5 w-25"><i class="fas fa-book-reader fa-2x btnRead"></i></a>
               
               @if($book->user == Auth::user())
-              <a href="{{route('book.edit', ['book'=>$book])}}" target="" class="btn btnEdit mt-5 ml-5 w-25">Edit</a>
-              <a href="" target="blank" class="btn btnRemove mt-5 ml-5 w-25" data-toggle="modal" data-target="#exampleModal">Remove</a>
+              <a href="{{route('book.edit', ['book'=>$book])}}" target="" class="btn mt-5 ml-5 w-25"><i class="fas fa-edit fa-2x text10 btnEdit"></i></a>
+              <a href="" target="blank" class="btn mt-5 ml-5 w-25" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-trash-alt fa-2x btnRemove"></i></a>
               @endif
               @endauth
               </div>
@@ -69,7 +72,7 @@ body{
           @csrf
             <h2 class="text10 text-center mb-5 pb-5">WAIT</h2>
             <h5 class="text-center text-dark my-5 py-5">Are you relly sure you want to REMOVE IT?</h5>
-            <button type="submit" class="btn btnRemove mt-5 w-25 d-block mx-auto">Remove</button>
+            <button type="submit" class="btn btnModalRemove mt-5 w-25 d-block mx-auto">Remove</button>
         </form>
         <button type="button" class="btn btn-warning mt-3 w-25 d-block mx-auto" data-dismiss="modal">Close</button>
       </div>
