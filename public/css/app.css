@@ -10932,6 +10932,23 @@ a.text-dark:focus {
   --dieci: yellow;
 }
 
+h1 {
+  font-family: "Dancing Script", cursive;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Philosopher", sans-serif;
+}
+
+p,
+button {
+  font-family: "Darker Grotesque", sans-serif;
+}
+
 .text10 {
   color: #e5f321;
 }
@@ -11119,5 +11136,24 @@ sup {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.bgTable {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.textTable {
+  color: #070707;
+}
+
+.social {
+  height: 2px;
+  width: 63%;
+  background-color: var(--dieci);
+}
+
+.profile {
+  -webkit-clip-path: polygon(25% 0%, 100% 0, 100% 78%, 75% 100%, 0 100%, 1% 25%);
+          clip-path: polygon(25% 0%, 100% 0, 100% 78%, 75% 100%, 0 100%, 1% 25%);
 }
 

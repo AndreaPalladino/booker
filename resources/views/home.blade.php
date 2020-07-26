@@ -8,6 +8,9 @@
         <div class="col-12 text-center">
           <h1 class="class mb-1"><sup>the</sup>Booker</h1>
           <hr id="bar">
+          @auth
+        <p id="subtitle" class="lead">{{$user->name}}, start sharing...</p>
+          @endauth
           <p id="subtitle" class="lead">a great way to share readings</p>
           <button class="btn-warning my-5" id="btn" value="Turn-on the Lights">Turn-on the Lights</button>
         </div>

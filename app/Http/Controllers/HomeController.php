@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Book;
 use App\Contact;
 use App\Mail\ContactRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
@@ -26,7 +28,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = Auth::user();
+
+        return view('home', compact('user'));
     }
 
     public function contact(){
@@ -50,5 +54,14 @@ class HomeController extends Controller
 
     public function thanks(){
         return view('thank');
+    }
+
+    public function profile(){
+         
+          
+         $user=Auth::user();
+         $books = $user->books()->get();
+
+        return view('profile', compact('user','books'));
     }
 }

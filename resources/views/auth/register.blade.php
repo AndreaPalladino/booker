@@ -13,14 +13,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card mt-5">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header"><h1>{{ __('Register') }}</h1></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right text-white">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right text-white"><h6>{{ __('Name') }}</h6></label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="borderbox w-75 bg-transparent @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right text-white">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right text-white"><h6>{{ __('E-Mail Address') }}</h6></label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="borderbox w-75 bg-transparent @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right text-white">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right text-white"><h6>{{ __('Password') }}</h6></label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="borderbox w-75 bg-transparent @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right text-white">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right text-white"><h6>{{ __('Confirm Password') }}</h6></label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="borderbox w-75 bg-transparent" name="password_confirmation" required autocomplete="new-password">
