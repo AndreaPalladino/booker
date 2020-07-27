@@ -118,6 +118,6 @@ class BookController extends Controller
     {
         $book->delete();
 
-        return redirect()->back();
+        return redirect(route('book.index'));
     }
 }

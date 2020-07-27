@@ -1,4 +1,4 @@
-<div class="container-fluid bg-dark">
+<div  id="footer" class="container-fluid bg-dark">
     <div class="row">
         <div class="col-12">
             <h4 class=" textFooter mt-3 text-center text-white">TheBooker™</h4>

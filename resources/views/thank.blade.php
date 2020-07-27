@@ -7,6 +7,10 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
+
+        #footer{
+            display: none;
+        }
     </style>
 @endsection
 @section('content')

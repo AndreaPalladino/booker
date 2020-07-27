@@ -52,7 +52,7 @@
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="borderbox w-75 bg-transparent @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
+                                 <p id="#pwdStatus"></p>
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -71,7 +71,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-warning">
+                                <button type="submit" class="btn btn-warning" id="pwdCheck">
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -83,3 +83,4 @@
     </div>
 </div>
 @endsection
+
