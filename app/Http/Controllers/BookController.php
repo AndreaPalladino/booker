@@ -85,7 +85,8 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        return view('book.edit', compact('book'));
+        $categories = Category::all();
+        return view('book.edit', compact('book', 'categories'));
     }
 
     /**
@@ -104,6 +105,11 @@ class BookController extends Controller
         $book->plot=$request->input('plot');
         $book->user_id=Auth::id();
         $book->update();
+        foreach($request->input() as $key=>$input){
+            if(is_numeric($key)){
+                $book->categories()->attach($input);
+            }
+        }
 
         return redirect(route('book.index', ['book'=>$book]));
     }

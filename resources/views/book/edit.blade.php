@@ -35,7 +35,7 @@
     
 <div class="container my-5 py-5">
     <div class="row">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-md-5 pl-md-5 mt-md-3">
             <h1 class="font-weight-bold text-center ml-md-5 pl-md-5">Editing....</h1>
         </div>
         <div class="col-12 col-md-5 ml-md-3 pl-md-4 mt-5">
@@ -53,6 +53,14 @@
                 <div class="form-group my-4">
                     <textarea  name="plot" class="rounded-box my-5" rows="5" cols="50" placeholder="Plot">{{$book->plot}}</textarea>
                 </div>
+                @foreach($categories as $category)
+                <div class="form-check d-md-inline mx-md-1">
+                <input name="{{$category->id}}" class="form-check-input text-white text-md-dark" type="checkbox" value="{{$category->id}}" id="defaultCheck1" value="{{$book->category}}">
+                    <label class="form-check-label" for="defaultCheck1">
+                      {{$category->name}}
+                    </label>
+                  </div>
+                @endforeach
                 <div class="form-group my-4">
                     <label class="mr-2" >Cover</label>
                     <input name="img" type="file" class="btn-dark" value="{{$book->img}}">
