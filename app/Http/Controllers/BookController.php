@@ -42,8 +42,10 @@ class BookController extends Controller
      */
     public function store(BookRequest $request)
     {
+       /* dd($request->all()); */
        
-
+       $categories = $request->input('tag_id');
+       
         $book = new Book();
 
         
@@ -56,11 +58,17 @@ class BookController extends Controller
         
         $book->save();
 
-        foreach($request->input() as $key=>$input){
+        
+
+        foreach($categories as $category) {
+            $book->categories()->attach($category);
+        }
+
+        /* foreach($request->input() as $key=>$input){
             if(is_numeric($key)){
                 $book->categories()->attach($input);
             }
-        }
+        } */
         
 
        return redirect()->back()->with('message','Book Uploaded Correctly!');

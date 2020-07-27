@@ -53,9 +53,17 @@
                 <div class="form-group mt-1">
                     <textarea  name="plot" class="rounded-box my-5" rows="5" cols="50" placeholder="Plot" value="{{old('plot')}}"></textarea>
                 </div>
-                @foreach($categories as $category)
+                {{-- @foreach($categories as $category)
                 <div class="form-check d-md-inline mx-md-1">
                 <input name="{{$category->id}}" class="form-check-input text-white text-md-dark" type="checkbox" value="{{$category->id}}" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                      {{$category->name}}
+                    </label>
+                  </div>
+                @endforeach --}}
+                @foreach($categories as $category)
+                <div class="form-check d-md-inline mx-md-1">
+                <input name="tag_id[]" class="form-check-input text-white text-md-dark" type="checkbox" value="{{$category->id}}" id="defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">
                       {{$category->name}}
                     </label>
@@ -77,10 +85,22 @@
 
 
 
+<!-- stai dicendo alla request di creare un array con il nome tag_id e inserisci in questo array il valore di category id dell'input che selzioneo
 
+categorie 1: thriller, 2: fantasy, 3: romanzo. 
+Quandoo seleziono categorie fantasy e romanzo, nella request avrò
+$request = [
+    'name' => nome del libro,
+    'prezzo' => prezzo del libro
+    'tag_id' => [
+        1 => 2,
+        2 => 3
+    ]
+]
 
-
-
-
+foreach($tag_id as $tag) {
+    $book->categories()->attach($tag);
+}
+-->
 
 @endsection
