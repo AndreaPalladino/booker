@@ -55,7 +55,7 @@
                 </div>
                 @foreach($categories as $category)
                 <div class="form-check d-md-inline mx-md-1">
-                <input name="{{$category->id}}" class="form-check-input text-white text-md-dark" type="checkbox" value="{{$category->id}}" id="defaultCheck1" value="{{$book->category}}">
+                <input name="tag_id[]" class="form-check-input text-white text-md-dark" type="checkbox" value="{{$category->id}}" id="defaultCheck1" value="{{$book->category}}">
                     <label class="form-check-label" for="defaultCheck1">
                       {{$category->name}}
                     </label>

@@ -106,6 +106,9 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
+       $categories = $request->input('tag_id');
+        
+        
         $book->title=$request->input('title');
         $book->author=$request->input('author');
         $book->img=$request->file('img')->store('public/img');
@@ -113,11 +116,15 @@ class BookController extends Controller
         $book->plot=$request->input('plot');
         $book->user_id=Auth::id();
         $book->update();
-        foreach($request->input() as $key=>$input){
+
+        foreach($categories as $category) {
+            $book->categories()->attach($category);
+        }
+        /* foreach($request->input() as $key=>$input){
             if(is_numeric($key)){
                 $book->categories()->attach($input);
             }
-        }
+        } */
 
         return redirect(route('book.index', ['book'=>$book]));
     }

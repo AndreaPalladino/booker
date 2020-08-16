@@ -26,9 +26,15 @@
 <body>
     <div id="app">
       
+        @if(Route::currentRouteName()!= 'home')
         @include('components._navbar')
           @yield('content')
-        @include('components._footer')
+       
+        @else
+        @include('components._navbar')
+          @yield('content')
+          @include('components._footer')
+        @endif
     </div>
     @stack('script')
     <script src="{{ asset('js/app.js') }}"></script>
